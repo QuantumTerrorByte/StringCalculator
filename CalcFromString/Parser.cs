@@ -3,16 +3,16 @@ using System.Text.RegularExpressions;
 
 namespace CalcFromString
 {
-    public class Parser
+    public class Parser //todo con with format provider
     {
         public string innerParentheses { get; set; } = @"\(\w*[^\(\)]\w*\)";
         public string outerParentheses { get; set; } = @"\(.*\)";
         private int counter = 0;
-
+        
         public string OpenParentheses(string equation) //  2*(10+(1+1))*3/6*5*4/2+3-10-5 //108
         {
             Console.WriteLine(++counter);
-            var matchParenthesesRegex = Regex.Match(equation,innerParentheses);
+            var matchParenthesesRegex = Regex.Match(equation, innerParentheses);
             if (matchParenthesesRegex.Success)
             {
                 Console.WriteLine();
@@ -27,7 +27,7 @@ namespace CalcFromString
             return SolveEquation(equation);
         }
 
-        public string SolveEquation(string equation) //  (2+2*3/6)
+        public string SolveEquation(string equation) //  (2+2*3/6) todo extract method with regex args
         {
             // var startIndex = 0;
             // var endIndex = 0;
@@ -59,19 +59,24 @@ namespace CalcFromString
             return equation;
         }
 
-        private int SolveSimplePartOfEquation(string equation)
+        public decimal SolveSimplePartOfEquation(string equation)
         {
-            var digits = Regex.Matches(equation, @"\d+");
-            var first = Int32.Parse(digits[0].Value);
-            var second = Int32.Parse(digits[1].Value);
-            var oper = Regex.Match(equation, @"\+|\-|\*|\/");
-            return oper.Value switch
+            var digits = Regex.Matches(equation, @"-*\d+\,*\d*");
+            var first = Decimal.Parse(digits[0].Value);
+            var second = Decimal.Parse(digits[1].Value);
+            var oper = Regex.Match(equation, @"\*|\/|\+");
+            if (!oper.Success)
+            {
+                oper = Regex.Match(equation, @"\-");
+            }
+
+            return oper.Value switch //todo what is several case for one answer with arrow syntax?
             {
                 "+" => (first + second),
-                "-" => (first - second),
+                "-" => (first + second),
                 "*" => (first * second),
                 "/" => (first / second),
-                _ => throw new ArgumentException()
+                _ => throw new ArgumentException("in: " + equation)
             };
         }
     }
