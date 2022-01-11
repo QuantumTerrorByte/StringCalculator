@@ -1,0 +1,16 @@
+D:\Projects\CalcFromString\CalcFromString\bin\Debug\net5.0\CalcFromString.exe
+D:\Projects\CalcFromString\CalcFromString\bin\Debug\net5.0\CalcFromString.deps.json
+D:\Projects\CalcFromString\CalcFromString\bin\Debug\net5.0\CalcFromString.runtimeconfig.json
+D:\Projects\CalcFromString\CalcFromString\bin\Debug\net5.0\CalcFromString.runtimeconfig.dev.json
+D:\Projects\CalcFromString\CalcFromString\bin\Debug\net5.0\CalcFromString.dll
+D:\Projects\CalcFromString\CalcFromString\bin\Debug\net5.0\ref\CalcFromString.dll
+D:\Projects\CalcFromString\CalcFromString\bin\Debug\net5.0\CalcFromString.pdb
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.csproj.AssemblyReference.cache
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.AssemblyInfoInputs.cache
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.AssemblyInfo.cs
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.csproj.CoreCompileInputs.cache
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.dll
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\ref\CalcFromString.dll
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.pdb
+D:\Projects\CalcFromString\CalcFromString\obj\Debug\net5.0\CalcFromString.genruntimeconfig.cache
